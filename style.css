@@ -4,6 +4,9 @@
     
 }
 
+ul {
+    list-style-type: none;
+}
 
 .container {
     height: 100vh;
@@ -14,6 +17,33 @@
 .sidebar {
     background-color:rgb(25, 146, 212);
     color: white;
+    padding-left: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+.logo {
+    padding-top: 20px;
+}
+.nav1 {
+    padding-top: 50px;
+}
+.nav1 li {
+    align-items: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: start;
+    justify-items: start;
+    padding-top: 10px;
+}
+.nav2 {
+    padding-top: 50px;
+}
+.nav2 li {
+    align-items: start;
+    justify-items: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    padding-top: 10px;
 }
 
 .contenthalf {
@@ -68,7 +98,7 @@
 
 .projects {
     display: grid;
-    gap: 20px;
+    gap: 30px;
     grid-row: span 2;
     grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
     grid-template-columns: 1fr 1fr;
@@ -88,10 +118,37 @@
     display: flex;
     flex-direction: column;
     border: 2px dotted red;
+    padding: 20px;
+}
+.anno-item {
+}
+.anno-line {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: grey;
+    background-color: grey;
 }
 
 .trending {
     border: 2px dotted blue;
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    padding-top: 0px;
+}
+.trend {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+.trend img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.trend div {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
 }
