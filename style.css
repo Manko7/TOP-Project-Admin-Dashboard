@@ -176,7 +176,7 @@ ul {
   flex-direction: column;
   display: grid;
   gap: 20px;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2.5fr 1fr;
   grid-template-rows: repeat(auto-fill, minmax(500px, 2fr));
   padding: 20px;
   padding-top: 40px;
@@ -205,8 +205,13 @@ ul {
   flex-direction: column;
   gap: 20px;
 }
+.project-item-upper h1 {
+  font-size: 20px;
+  font-weight: 900;
+}
 .project-item-upper p {
   color: darkslategray;
+  font-size: 12px;
 }
 .project-item-buttons {
   display: flex;
@@ -233,6 +238,14 @@ ul {
   background-color: white;
   box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.1);
   max-height: max-content;
+}
+.announcements p {
+  font-size: 12px;
+  font-weight: lighter;
+}
+.announcements h4 {
+  font-size: 16px;
+  font-weight: 900;
 }
 .anno-line {
   margin-top: 20px;
@@ -266,6 +279,10 @@ ul {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
+}
+.trend p {
+  font-size: 12px;
+  font-weight: lighter;
 }
 
 .rightBoards {
