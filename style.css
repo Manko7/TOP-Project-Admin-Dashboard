@@ -3,6 +3,12 @@
   padding: 0px;
 }
 
+body {
+  font-family: "Ruda", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 ul {
   list-style-type: none;
 }
@@ -10,39 +16,41 @@ ul {
 .container {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 4fr;
 }
 
 .sidebar {
   background-color: rgb(25, 146, 212);
   color: white;
-  padding-left: 20px;
   font-weight: bold;
   text-align: left;
 }
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 20px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
 .logo {
   padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+}
+.logo a {
+  gap: 10px;
+  padding-left: 20px;
 }
 .nav1 {
   padding-top: 50px;
 }
-.nav1 li {
-  align-items: start;
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  align-items: start;
-  justify-items: start;
-  padding-top: 10px;
-}
 .nav2 {
   padding-top: 50px;
-}
-.nav2 li {
-  align-items: start;
-  justify-items: start;
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  padding-top: 10px;
 }
 
 .contenthalf {
@@ -143,21 +151,38 @@ ul {
   background-color: rgb(25, 146, 212);
   color: white;
   border-radius: 20px;
-  border: none;
+  border: 1px white solid;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 30px;
   padding-left: 30px;
 }
+.rightActionbar button:hover {
+  background-color: white;
+  color: rgb(25, 146, 212);
+  border-radius: 20px;
+  border: 1px rgb(25, 146, 212) solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.rightActionbar button::after,
+.rightActionbar button:hover::after {
+  transition-duration: 0.2s;
+}
 
 .content {
   flex-direction: column;
-  padding: 20px;
-  padding-top: 40px;
   display: grid;
   gap: 20px;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: repeat(auto-fill, minmax(500px, 2fr));
+  padding: 20px;
+  padding-top: 40px;
+}
+.content h2 {
+  padding-bottom: 10px;
 }
 
 .projects {
@@ -168,7 +193,7 @@ ul {
   grid-template-columns: 1fr 1fr;
 }
 .project-item {
-  box-shadow: 3px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.1);
   border-left: 5px solid rgb(240, 180, 41);
   border-radius: 10px;
   background-color: white;
@@ -176,9 +201,9 @@ ul {
   padding-bottom: 3cap;
   padding-left: 20px;
   padding-right: 20px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
-  grid-template-rows: 1fr 1fr;
 }
 .project-item-upper p {
   color: darkslategray;
@@ -187,23 +212,27 @@ ul {
   display: flex;
   justify-content: flex-end;
   gap: 20px;
+  padding-top: 10px;
 }
 .project-item-buttons button {
   border: none;
-  background-color: none;
+  background-color: white;
   color: none;
+  padding: none;
+  margin: none;
+}
+.project-item-buttons button:hover {
+  cursor: pointer;
 }
 
 .announcements {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 35px;
   border-radius: 10px;
   background-color: white;
-  box-shadow: 3px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.1);
   max-height: max-content;
-}
-.anno-item {
 }
 .anno-line {
   margin-top: 20px;
@@ -220,7 +249,7 @@ ul {
   border-radius: 10px;
   max-height: max-content;
   background-color: white;
-  box-shadow: 3px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.1);
 }
 .trend {
   display: flex;
@@ -237,4 +266,10 @@ ul {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
+}
+
+.rightBoards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
